@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+
 class AdminController extends Controller
 {
     public function __construct()
@@ -10,6 +12,8 @@ class AdminController extends Controller
     }
     public function admin()
     {
-        return view('admin');
+        $user = User::all();
+       // dd($user);
+        return view('admin',compact('user'));
     }
 }

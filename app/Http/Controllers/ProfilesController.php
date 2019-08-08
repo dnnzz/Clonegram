@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Profile;
-use Illuminate\Http\Request;
+
 use App\User;
 use Illuminate\Support\Facades\Cache;
 use Intervention\Image\Facades\Image;
-use function foo\func;
+
 
 class ProfilesController extends Controller
 {
@@ -63,4 +62,5 @@ class ProfilesController extends Controller
         //dd(compact('user'));
         return view('profiles.allProfiles',compact('user'));
     }
+
 }
