@@ -13,7 +13,7 @@ class AdminController extends Controller
     public function admin()
     {
         $user = User::all();
-       // dd($user);
+        //dd($user);
         return view('admin',compact('user'));
     }
 }
